@@ -7,4 +7,8 @@
       "url": "https://github.com/osamaahmedshaikh/comics"
     },
     "homepage": "."
+    ,"scripts": {
+        "start": "node express.js"
+      }
+    
 }
