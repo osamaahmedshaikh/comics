@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="comisadmin.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Comic Admin</h1>
+    </div>
+    <div class="container">
+        <form id="login" action="http://localhost:8080/update/"method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname"><b>Title</b></label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="titlename" placeholder="Title of Comic"  minlength="5" required>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject"><b>Date</b></label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="date" placeholder="Date of comic uploaded" style="height:45px" minlength="5" required></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject"><b>News</b></label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="news" placeholder="Write your news of comic" style="height:45px" minlength="5" required></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject"><b>Link</b></label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="link" placeholder="Write your link of comic" style="height:45px" minlength="5" required></textarea>
+                </div>
+            </div>
+            </div>
+            <div class="update">
+                <br />
+                <input type="submit" value="Update">
+                <br /><br />
+            </div>
+        </form>
+    </div>
+    <script>
+        
+        $("#login").validate();
+    </script>
+</body>
+</html>
