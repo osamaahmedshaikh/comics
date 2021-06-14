@@ -3,8 +3,11 @@
     "description": "",
     "version": "1.0.0",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/osamaahmedshaikh/comics"
+        "type": "git",
+        "url": "https://github.com/osamaahmedshaikh/comics"
     },
-    "homepage": "."  
+    "homepage": ".",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
