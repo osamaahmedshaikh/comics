@@ -27,7 +27,7 @@ var someVarName = parseInt(localStorage.getItem("someVarKey")) + 1;
 console.log(someVarName)
 localStorage.setItem("someVarKey", someVarName);
 app1.controller("ctrl" , function($scope, $http){
-  $http.get("http://localhost:8080/data/").then(function (response) {
+  $http.get("https://localhost:8080/data/").then(function (response) {
     console.log(response.data) 
   });
   $http.get("https://xkcd.com/"+someVarName+"/info.0.json").then(function (response) {
@@ -40,6 +40,7 @@ app1.controller("ctrl" , function($scope, $http){
     $scope.new = response.data.news;
     $scope.links = response.data.link;
     $scope.imagefile = response.data.img;
+    $scope.alts = response.data.alt;
     $scope.trancript = (response.data.transcript).replace(/[[[|&;$%@"<>()}{+,¢£«±Ÿ÷&*()\/<>!@#$%^]/g, "");
   });
 });
